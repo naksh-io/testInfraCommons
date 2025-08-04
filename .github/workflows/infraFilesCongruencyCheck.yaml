@@ -48,5 +48,4 @@ jobs:
           --base main \
           --head $branch_name \
           --title "Automated Update" \
-          --body "This PR was automatically created by GitHub Actions." \
-          --label "automated"
+          --body "This PR was automatically created by infraFilesCongruencyCheck GitHub Action." \
