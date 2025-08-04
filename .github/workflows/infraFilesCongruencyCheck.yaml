@@ -1,6 +1,11 @@
 name: infraFilesCongruencyCheck
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0,12 * * *'
+  push:
+    branches:
+      - main
 
 jobs:
   congruency-check:
