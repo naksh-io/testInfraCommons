@@ -1,6 +1,11 @@
 name: infraFilesCongruencyCheck
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0,12 * * *'
+  push:
+    branches:
+      - main
 
 jobs:
   congruency-check:
@@ -48,4 +53,5 @@ jobs:
           --base main \
           --head $branch_name \
           --title "Automated Update" \
-          --body "This PR was automatically created by infraFilesCongruencyCheck GitHub Action." \
+          --body "This PR was automatically created by infraFilesCongruencyCheck GitHub Action to ensure that
+                  core infra files remain synchronized with naksh-io/infraCommns" \
